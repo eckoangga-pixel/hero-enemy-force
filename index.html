@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#063c78">
+<title>Nusantara Sky Heroes 3D</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<section id="menu" class="screen active">
+ <div class="stars-bg"></div><div class="cloud cloud1">☁️</div><div class="cloud cloud2">☁️</div>
+ <div class="panel">
+  <div class="title-row"><img src="hero.png"><div><h1>NUSANTARA SKY HEROES</h1><h2>3D Eduventure</h2></div><img src="enemy.png"></div>
+  <p class="tag">🚀 Terbang • 🇮🇩 Jelajahi Indonesia • 🎯 Lawan Musuh • 🧠 Taklukkan Soal</p>
+  <div class="grid">
+   <label><span>🚀 Mode Pemain</span><select id="mode"><option value="1">Solo</option><option value="2">Duo</option><option value="4">Squad</option></select></label>
+   <label><span>🎓 Kelas</span><select id="grade"></select></label>
+   <label><span>📚 Mata Pelajaran</span><select id="subject"></select></label>
+   <label><span>⭐ Kesulitan</span><select id="difficulty"><option value="easy">Mudah</option><option value="medium">Sedang</option><option value="hard">Sulit</option></select></label>
+  </div>
+  <button id="start" class="primary">✈️ MULAI MISI</button>
+  <button id="audio" class="secondary">🔊 AUDIO LANGIT: ON</button>
+  <div class="help">🕹️ <b>HP/PID:</b> geser pesawat untuk menghindar, ketuk/swipe ke musuh untuk menembak.<br>⌨️ <b>Laptop:</b> WASD / tombol panah + Space.</div>
+  <small>Game ini dibuat oleh : Eko Angga Purnomo, S.Pd.</small>
+ </div>
+</section>
+
+<section id="game" class="screen">
+ <canvas id="canvas"></canvas>
+ <div id="hud"><span>⭐ <b id="score">0</b></span><span>🗺️ <b id="region">Jawa</b></span><span id="mission">Misi 1/10</span><span>❤️ <b id="hp">3</b></span><button id="pause">⏸</button><button id="back">🏠</button></div>
+ <div id="switch"></div>
+</section>
+
+<section id="pauseBox" class="overlay"><div class="dialog center"><div class="bigicon">☁️✈️☁️</div><h2>Misi Dijeda</h2><button id="resume" class="primary">▶ Lanjut Terbang</button><button class="secondary home">🏠 Menu Utama</button></div></section>
+<section id="quiz" class="overlay"><div class="dialog"><div id="meta"></div><h2 id="question"></h2><div id="answers"></div><p id="why"></p><button id="next" class="primary hide">🚀 Lanjut Misi</button></div></section>
+<section id="lose" class="overlay"><div class="dialog center"><div class="bigicon">💥✈️</div><h1>MISI GAGAL</h1><p>Nyawa pesawat habis. Coba lagi dan hindari tembakan musuh!</p><div id="loseScore"></div><button id="retry" class="primary">🔄 Coba Lagi</button><button class="secondary home">🏠 Menu Utama</button></div></section>
+<section id="result" class="overlay"><div class="dialog center"><div class="bigicon">🏆✈️🏆</div><h1>MISI BERHASIL!</h1><div id="stars"></div><div id="final"></div><button id="again" class="primary">🚀 Main Lagi</button><button class="secondary home">🏠 Menu Utama</button></div></section>
+<script src="game.js"></script></body></html>
